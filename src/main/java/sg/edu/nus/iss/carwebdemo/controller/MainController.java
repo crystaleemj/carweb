@@ -30,15 +30,11 @@ public class MainController {
     @GetMapping (path = "/cars/{carModel}")
     public String carPage(Model model, Car car, @PathVariable String carModel) throws IOException{
 
-        System.out.println(carModel);
        car = service.showCar(carModel + ".txt");
-       System.out.println(carModel);
-        
+
         model.addAttribute("newcar", car);
         model.addAttribute("imageName", carModel);
         
-        System.out.println(carModel);
-
         return "cars";
     }
 }
