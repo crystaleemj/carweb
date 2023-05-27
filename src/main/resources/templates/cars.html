@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Details</title>
+</head>
+<body>
+    
+    <img width="400" height="300" th:src="@{${'/carpics/' + imageName + '.jpeg'}}"/>
+    <span data-th-text="${imageName}"></span>
+
+    <div data-th-object="${newcar}">
+
+    <p>
+        Brand 
+        <p data-th-text="*{brand}" ></p>
+    </p>
+    <p>
+        Model
+        <p data-th-text="*{model}" ></p>
+    </p>
+    <p>
+        Year
+        <p data-th-text="*{year}" ></p>
+    </p>
+    <p>
+        Transmission
+        <p data-th-text="*{transmission}" ></p>
+    </p>
+    <p>
+        Color
+        <p data-th-text="*{color}" ></p>
+    </p>
+
+    </div>
+    
+</body>
+</html>
